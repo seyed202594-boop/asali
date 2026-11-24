@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ثبت‌نام و پرداخت دوره</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
+
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:'Vazirmatn',sans-serif;
+ background:linear-gradient(135deg,#101827,#192b40,#101827);
+ color:white;
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:25px;
+}
+.container{width:100%;max-width:490px}
+.card{
+ background:#fff;
+ color:#202b3b;
+ border-radius:25px;
+ padding:30px 24px;
+ box-shadow:0 25px 80px #0006;
+}
+.logo{
+ width:65px;height:65px;
+ background:#e9f7f1;
+ color:#159768;
+ border-radius:20px;
+ display:grid;place-items:center;
+ font-size:30px;margin:auto;
+}
+h2{text-align:center;margin:18px 0 8px}
+.subtitle{
+ text-align:center;
+ color:#718096;
+ font-size:13px;
+ line-height:2;
+}
+.message{
+ background:#f0f8f5;
+ border-right:4px solid #159768;
+ padding:16px;
+ border-radius:12px;
+ font-size:14px;
+ line-height:2.3;
+ margin:23px 0;
+}
+.section-title{font-size:14px;font-weight:800;margin-bottom:12px}
+.bank{
+ background:#f5f7fa;
+ border:1px solid #e4e9ef;
+ padding:17px;
+ border-radius:16px;
+}
+.bank-name{
+ color:#159768;
+ font-weight:800;
+ font-size:13px;
+ margin-bottom:15px;
+}
+.number{
+ direction:ltr;
+ text-align:center;
+ font-size:23px;
+ font-weight:800;
+ letter-spacing:1px;
+ color:#192b40;
+ padding:12px 0;
+}
+.owner{text-align:center;font-size:13px;color:#64748b}
+.copy{
+ width:100%;
+ border:0;
+ border-radius:11px;
+ background:#159768;
+ color:white;
+ font-family:inherit;
+ font-size:14px;
+ font-weight:700;
+ padding:13px;
+ cursor:pointer;
+ margin-top:15px;
+}
+.copy:hover{background:#107b55}
+.steps{
+ margin-top:22px;
+ background:#fff8eb;
+ border:1px solid #f5e4bd;
+ border-radius:14px;
+ padding:17px;
+}
+.steps h3{font-size:14px;margin:0 0 9px;color:#a66b12}
+.steps p{font-size:13px;line-height:2.2;margin:0;color:#715b37}
+.send{
+ display:block;
+ text-align:center;
+ text-decoration:none;
+ color:white;
+ background:#1685d5;
+ border-radius:12px;
+ padding:14px;
+ margin-top:18px;
+ font-weight:700;
+ font-size:14px;
+}
+.footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:20px}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+
+<div class="logo">✦</div>
+
+<h2>ثبت‌نام در دوره آموزشی</h2>
+<p class="subtitle">برای نهایی کردن ثبت‌نام، لطفاً مبلغ دوره را به شماره کارت زیر واریز کنید.</p>
+
+<div class="message">     واقعیتش ارزش واقعی دوره 3.800 میلیون تومان هست ولی چون اولین دوره ای هست که می خوام بفروشم نمی خوام قیمتش مانع خرید بشه..  1.900 میلیون تومان میشه
+مطمئنم هر کی تهیه کنه متوجه ارزش واقعیش می شه..
+</div>
+
+<div class="section-title">اطلاعات پرداخت</div>
+
+<div class="bank">
+<div class="bank-name">🏦 بانک پاسارگاد</div>
+
+<div class="number" id="cardNumber">
+5022 2910 4312 6778
+</div>
+
+<div class="owner">
+به نام: سکینه عسلی طالکوئی
+</div>
+
+<button class="copy" onclick="copyCard()">
+کپی شماره کارت
+</button>
+</div>
+
+<div class="steps">
+<h3>📌 مرحله آخر ثبت‌نام</h3>
+<p>
+۱. مبلغ دوره را به شماره کارت بالا واریز کنید.<br>
+۲. تصویر فیش واریزی را آماده کنید.<br>
+۳. فیش واریزی را در پیام‌رسان بله به آیدی زیر ارسال کنید.
+</p>
+</div>
+
+<a class="send" href="https://ble.ir/drasali" target="_blank">
+ارسال فیش واریزی در بله ←
+</a>
+
+<div class="footer">
+با تشکر از اعتماد و همراهی شما 🌱
+</div>
+
+</div>
+</div>
+
+<script>
+function copyCard(){
+ const number='5022291043126778';
+ navigator.clipboard.writeText(number).then(()=>{
+  document.querySelector('.copy').innerText='✓ شماره کارت کپی شد';
+ }).catch(()=>{
+  alert('شماره کارت: '+number);
+ });
+}
+</script>
+
+</body>
+</html>
